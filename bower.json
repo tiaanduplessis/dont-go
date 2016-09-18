@@ -1,0 +1,27 @@
+{
+  "name": "dont-go",
+  "description": "Client-side library to change the title and/or favicon of the page when it is inactive",
+  "main": "lib/dont-go.min.js",
+  "authors": [
+    "Tiaan <tiaanduplessis@hotmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "library",
+    "umd",
+    "es6",
+    "title",
+    "favicon",
+    "babel",
+    "universal",
+    "eslint"
+  ],
+  "homepage": "https://github.com/mightyCrow/dont-go",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
