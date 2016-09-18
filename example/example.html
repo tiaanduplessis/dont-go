@@ -28,19 +28,17 @@
       margin-bottom: 20px;
     }
 
-
   </style>
   <body>
     <h1>Switch tabs and check out the new favicon & title</h1>
     <img src="../media/leo.gif" alt="Dont go!" />
-    <script src="../lib/dont-go.js"></script>
+    <script src="../lib/dont-go.min.js"></script>
     <script>
+
+      // HERE BE THE LOGIC
       dontGo({
         title: 'Come back!',
-        favicon: {
-          enabled: true,
-          src: '../media/favicon.ico'
-        }
+        faviconSrc: '../media/favicon.ico'
       })
     </script>
   </body>
