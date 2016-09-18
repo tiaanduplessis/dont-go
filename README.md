@@ -5,6 +5,10 @@
 # dont-go :sob:
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![GitHub version](https://badge.fury.io/gh/mightyCrow%2Fdont-go@2x.png)](https://badge.fury.io/gh/mightyCrow%2Fdont-go)
+[![npm version](https://badge.fury.io/js/dont-go@2x.png)](https://badge.fury.io/js/dont-go)
+[![Bower version](https://badge.fury.io/bo/dont-go@2x.png)](https://badge.fury.io/bo/dont-go)
+[![Build Status](https://travis-ci.org/mightyCrow/dont-go.svg?branch=master)](https://travis-ci.org/mightyCrow/dont-go)
 
 A small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **1.08 kB**. Note that **You must include a default favicon in your webpage**.
 <p align="center">
