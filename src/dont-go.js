@@ -1,10 +1,7 @@
 export default function dontGo(options = {}) {
   const defaults = {
-    title: "Please don't go!",
-    favicon: {
-      enabled: false,
-      src: ''
-    }
+    title: 'Don\'t go!',
+    faviconSrc: ''
   };
 
   const opts = Object.assign(defaults, options);
@@ -13,15 +10,16 @@ export default function dontGo(options = {}) {
   let originalFavicon;
   let img;
 
+  // Store the original favicon if it exists
   if (document.querySelectorAll('link[rel$="icon"]').length) {
     favicon = document.querySelectorAll('link[rel$="icon"]')[0];
     originalFavicon = favicon.getAttribute('href');
   }
 
-
-  if (opts.favicon.enabled) {
+  // Preload the alternative favicon
+  if (opts.faviconSrc.length) {
     img = new Image();
-    img.src = opts.favicon.src;
+    img.src = opts.faviconSrc;
   }
 
   document.addEventListener("visibilitychange", () => {
@@ -29,8 +27,8 @@ export default function dontGo(options = {}) {
     document.title = (document.hidden) ? opts.title : originalTitle
 
     // Change favicon if enabled
-    if (opts.favicon.enabled) {
-      favicon.setAttribute('href',   (document.hidden) ? opts.favicon.src : originalFavicon)
+    if (opts.faviconSrc.length) {
+      favicon.setAttribute('href',   (document.hidden) ? opts.faviconSrc : originalFavicon)
     }
   });
 
