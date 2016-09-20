@@ -5,14 +5,14 @@
 # dont-go :sob:
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![GitHub version](https://badge.fury.io/gh/mightyCrow%2Fdont-go@2x.png)](https://badge.fury.io/gh/mightyCrow%2Fdont-go)
-[![npm version](https://badge.fury.io/js/dont-go@2x.png)](https://badge.fury.io/js/dont-go)
-[![Bower version](https://badge.fury.io/bo/dont-go@2x.png)](https://badge.fury.io/bo/dont-go)
+[![GitHub version](https://badge.fury.io/gh/mightyCrow%2Fdont-go.svg)](https://badge.fury.io/gh/mightyCrow%2Fdont-go)
+[![npm version](https://badge.fury.io/js/dont-go.svg)](https://badge.fury.io/js/dont-go)
+[![Bower version](https://badge.fury.io/bo/dont-go.svg)](https://badge.fury.io/bo/dont-go)
 [![Build Status](https://travis-ci.org/mightyCrow/dont-go.svg?branch=master)](https://travis-ci.org/mightyCrow/dont-go)
 
 A small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **1.08 kB**. Note that **You must include a default favicon in your webpage**.
 <p align="center">
-	<a href=""><img width="100%" src="media/example.png" alt="example"></a>
+	<a href=""><img width="80%" src="media/example.png" alt="example"></a>
 </p>
 
 ## Install
@@ -41,6 +41,7 @@ dontGo({
 	faviconSrc: 'path/to/Alternative/favicon.ico'
 });
 ```
+The faviconSrc property is optional and will keep the same icon if not set. 
 
 ## Contributing
 All Contributions are welcome! Please open up an issue if you would like to help out. :smile:
