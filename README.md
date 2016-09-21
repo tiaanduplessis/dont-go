@@ -43,6 +43,9 @@ dontGo({
 ```
 The faviconSrc property is optional and will keep the same icon if not set. 
 
+## TODO :memo:
+- Add ability to set timeout before title & favicon change.
+
 ## Contributing
 All Contributions are welcome! Please open up an issue if you would like to help out. :smile:
 
