@@ -3,8 +3,6 @@
 </p>
 
 # dont-go :sob:
-
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![GitHub version](https://badge.fury.io/gh/mightyCrow%2Fdont-go.svg)](https://badge.fury.io/gh/mightyCrow%2Fdont-go)
 [![npm version](https://badge.fury.io/js/dont-go.svg)](https://badge.fury.io/js/dont-go)
 [![Bower version](https://badge.fury.io/bo/dont-go.svg)](https://badge.fury.io/bo/dont-go)
@@ -41,7 +39,7 @@ dontGo({
 	faviconSrc: 'path/to/Alternative/favicon.ico'
 });
 ```
-The faviconSrc property is optional and will keep the same icon if not set. 
+The faviconSrc property is optional and will keep the same icon if not set.
 
 ## TODO :memo:
 - Add ability to set timeout before title & favicon change.
