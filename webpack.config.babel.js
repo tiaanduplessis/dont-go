@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import path from 'path';
-import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 // Package.json
 import packageConfig from './package';
@@ -11,16 +10,8 @@ const env = process.env.NODE_ENV || 'production';
 const PROD = env === 'production';
 
 // Configuration
-let outputName;
 const outputPath = path.resolve( __dirname, 'lib' );
-const plugins = [ new CleanWebpackPlugin( [outputPath] ) ];
-
-if ( PROD ) {
-  plugins.push( new webpack.optimize.UglifyJsPlugin( { minimize: true, sourceMap: false } ) );
-  outputName = `${libraryFilename}.min.js`;
-} else {
-  outputName = `${libraryFilename}.js`;
-}
+const outputName = PROD ? `${libraryFilename}.min.js` : `${libraryFilename}.js`;
 
 export default {
   entry: libraryEntry,
@@ -50,5 +41,5 @@ export default {
       }
     ]
   },
-  plugins
+  // plugins
 };
