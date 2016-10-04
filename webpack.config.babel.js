@@ -41,5 +41,9 @@ export default {
       }
     ]
   },
-  // plugins
+  plugins: PROD ? [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false }
+    })
+  ] : []
 };
