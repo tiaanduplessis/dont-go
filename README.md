@@ -36,13 +36,13 @@ To use, simply call the function with options.
 ```javascript
 dontGo({
 	title: 'Alternative title text right here!',
-	faviconSrc: 'path/to/Alternative/favicon.ico'
+	faviconSrc: 'path/to/Alternative/favicon.ico',
+	timeout: 5000 //5 seconds
 });
 ```
-The faviconSrc property is optional and will keep the same icon if not set.
+The `faviconSrc` property is optional and will keep the same icon if not set.
 
-## TODO :memo:
-- Add ability to set timeout before title & favicon change.
+The `timeout` property is optional, it takes an interval in milliseconds to before title & favicon change.
 
 ## Contributing
 All Contributions are welcome! Please open up an issue if you would like to help out. :smile:
