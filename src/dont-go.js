@@ -1,7 +1,8 @@
 export default function dontGo(options = {}) {
   const defaults = {
     title: 'Don\'t go!',
-    faviconSrc: ''
+    faviconSrc: '',
+    timeout: 0
   };
 
   const opts = Object.assign(defaults, options);
@@ -23,6 +24,16 @@ export default function dontGo(options = {}) {
   }
 
   document.addEventListener("visibilitychange", () => {
+    // Make sure we ignore timeout when coming back
+    if(document.visibilityState == 'hidden' && opts.timeout > 0) {
+      setTimeout(onChange, opts.timeout);
+    }
+    else {
+      onChange();
+    }
+  });
+
+  let onChange = () => {
     // Change the title
     document.title = (document.hidden) ? opts.title : originalTitle
 
@@ -30,6 +41,6 @@ export default function dontGo(options = {}) {
     if (opts.faviconSrc.length) {
       favicon.setAttribute('href',   (document.hidden) ? opts.faviconSrc : originalFavicon)
     }
-  });
+  }
 
 }
