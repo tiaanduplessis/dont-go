@@ -31,6 +31,12 @@ $ bower install dont-go
 $ npm install dont-go
 ```
 
+**Install with yarn**
+
+```sh
+$ yarn add wenk
+```
+
 ## Usage
 To use, simply call the function with options.
 ```javascript
