@@ -8,7 +8,7 @@
 [![Bower version](https://badge.fury.io/bo/dont-go.svg)](https://badge.fury.io/bo/dont-go)
 [![Build Status](https://travis-ci.org/mightyCrow/dont-go.svg?branch=master)](https://travis-ci.org/mightyCrow/dont-go)
 
-A small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **614 Bytes** when gzipped. Note that **You must include a default favicon in your webpage**.
+A small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **615 Bytes** when gzipped. Note that **You must include a default favicon in your webpage**.
 <p align="center">
 	<a href=""><img width="80%" src="media/example.png" alt="example"></a>
 </p>
