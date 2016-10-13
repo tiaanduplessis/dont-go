@@ -34,7 +34,7 @@ $ npm install dont-go
 **Install with yarn**
 
 ```sh
-$ yarn add wenk
+$ yarn add dont-go
 ```
 
 ## Usage
