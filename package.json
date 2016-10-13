@@ -1,6 +1,6 @@
 {
   "name": "dont-go",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Client-side library to change the title and/or favicon of the page when it is inactive",
   "author": "Tiaan <tiaanduplessis@hotmail.com>",
   "license": "MIT",
@@ -34,7 +34,9 @@
   "bugs": {
     "url": "https://github.com/mightyCrow/dont-go/issues"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "homepage": "https://github.com/mightyCrow/dont-go",
   "devDependencies": {
     "babel-core": "^6.4.5",
