@@ -13,7 +13,7 @@ export default function dontGo(options = {}) {
 
   // Store the original favicon if it exists
   if (document.querySelectorAll('link[rel$="icon"]').length) {
-    favicon = document.querySelectorAll('link[rel$="icon"]')[0];
+    favicon = document.querySelector('link[rel$="icon"]');
     originalFavicon = favicon.getAttribute('href');
   }
 
@@ -25,11 +25,12 @@ export default function dontGo(options = {}) {
 
   document.addEventListener("visibilitychange", () => {
     // Make sure we ignore timeout when coming back
-    if(document.visibilityState == 'hidden' && opts.timeout > 0) {
-      setTimeout(onChange, opts.timeout);
-    }
-    else {
-      onChange();
+    if(document.visibilityState == 'hidden') {
+      if(opts.timeout > 0) {
+        setTimeout(onChange, opts.timeout);
+      }  else {
+        onChange();
+      }
     }
   });
 
