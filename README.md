@@ -54,4 +54,4 @@ The `timeout` property is optional, it takes an interval in milliseconds to befo
 All Contributions are welcome! Please open up an issue if you would like to help out. :smile:
 
 ## License
-Created with ♥ by [Tiaan du Plessis](https://github.com/mightyCrow). Licensed under the MIT License.
+Created with ♥ by [Tiaan du Plessis](https://github.com/mightyCrow). Licensed under the [MIT License](https://tiaan.mit-license.org/).
