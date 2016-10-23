@@ -17,7 +17,9 @@ A small client-side library with zero dependencies to change the title and/or fa
 **Install with cdn**
 
 ```html
-<script src="https://cdn.rawgit.com/mightyCrow/dont-go/master/lib/dont-go.min.js"></script>
+<script src="https://cdn.rawgit.com/mightyCrow/dont-go/master/lib/dont-go.js"></script>
+<!-- Or -->
+<script src="https://unpkg.com/dont-go/lib/dont-go.js"></script>
 ```
 
 **Install with Bower**
