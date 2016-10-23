@@ -23,25 +23,26 @@ export default function dontGo(options = {}) {
     img.src = opts.faviconSrc;
   }
 
+  const setHidden = () => {
+    document.title = opts.title
+    if (opts.faviconSrc.length) {
+      favicon.setAttribute('href', opts.faviconSrc)
+    }
+  }
+
   document.addEventListener("visibilitychange", () => {
-    // Make sure we ignore timeout when coming back
     if(document.visibilityState == 'hidden') {
       if(opts.timeout > 0) {
-        setTimeout(onChange, opts.timeout);
-      }  else {
-        onChange();
+        setTimeout(setHidden, opts.timeout);
+      } else {
+        setHidden();
       }
+    } else {
+      document.title = originalTitle;
+      favicon.setAttribute('href', originalFavicon);
     }
   });
 
-  let onChange = () => {
-    // Change the title
-    document.title = (document.hidden) ? opts.title : originalTitle
 
-    // Change favicon if enabled
-    if (opts.faviconSrc.length) {
-      favicon.setAttribute('href',   (document.hidden) ? opts.faviconSrc : originalFavicon)
-    }
-  }
 
 }
