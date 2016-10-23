@@ -10,6 +10,7 @@ export default function dontGo(options = {}) {
   let favicon;
   let originalFavicon;
   let img;
+  let timeout;
 
   // Store the original favicon if it exists
   if (document.querySelectorAll('link[rel$="icon"]').length) {
@@ -31,18 +32,17 @@ export default function dontGo(options = {}) {
   }
 
   document.addEventListener("visibilitychange", () => {
-    if(document.visibilityState == 'hidden') {
-      if(opts.timeout > 0) {
-        setTimeout(setHidden, opts.timeout);
+    if (document.visibilityState == 'hidden') {
+      if (opts.timeout > 0) {
+        timeout = setTimeout(setHidden, opts.timeout);
       } else {
         setHidden();
       }
     } else {
       document.title = originalTitle;
       favicon.setAttribute('href', originalFavicon);
+      clearTimeout(timeout);
     }
   });
-
-
 
 }
