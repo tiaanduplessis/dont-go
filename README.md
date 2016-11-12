@@ -3,10 +3,10 @@
 </p>
 
 # dont-go :sob:
-[![GitHub version](https://badge.fury.io/gh/mightyCrow%2Fdont-go.svg)](https://badge.fury.io/gh/mightyCrow%2Fdont-go)
+[![GitHub version](https://badge.fury.io/gh/tiaanduplessis%2Fdont-go.svg)](https://badge.fury.io/gh/tiaanduplessis%2Fdont-go)
 [![npm version](https://badge.fury.io/js/dont-go.svg)](https://badge.fury.io/js/dont-go)
 [![Bower version](https://badge.fury.io/bo/dont-go.svg)](https://badge.fury.io/bo/dont-go)
-[![Build Status](https://travis-ci.org/mightyCrow/dont-go.svg?branch=master)](https://travis-ci.org/mightyCrow/dont-go)
+[![Build Status](https://travis-ci.org/tiaanduplessis/dont-go.svg?branch=master)](https://travis-ci.org/tiaanduplessis/dont-go)
 
 A small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **615 Bytes** when gzipped. Note that **You must include a default favicon in your webpage**.
 <p align="center">
@@ -17,7 +17,7 @@ A small client-side library with zero dependencies to change the title and/or fa
 **Install with cdn**
 
 ```html
-<script src="https://cdn.rawgit.com/mightyCrow/dont-go/master/lib/dont-go.js"></script>
+<script src="https://cdn.rawgit.com/tiaanduplessis/dont-go/master/lib/dont-go.js"></script>
 <!-- Or -->
 <script src="https://unpkg.com/dont-go/lib/dont-go.js"></script>
 ```
@@ -56,4 +56,4 @@ The `timeout` property is optional, it takes an interval in milliseconds to befo
 All Contributions are welcome! Please open up an issue if you would like to help out. :smile:
 
 ## License
-Created with ♥ by [Tiaan du Plessis](https://github.com/mightyCrow). Licensed under the [MIT License](https://tiaan.mit-license.org/).
+Created with ♥ by [Tiaan du Plessis](https://github.com/tiaanduplessis). Licensed under the [MIT License](https://tiaan.mit-license.org/).

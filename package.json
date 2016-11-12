@@ -2,7 +2,7 @@
   "name": "dont-go",
   "version": "1.0.6",
   "description": "Client-side library to change the title and/or favicon of the page when it is inactive",
-  "author": "Tiaan <tiaanduplessis@hotmail.com>",
+  "author": "Tiaan du Plessis @tiaanduplessis",
   "license": "MIT",
   "main": "lib/dont-go.js",
   "keywords": [
@@ -29,15 +29,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mightyCrow/dont-go.git"
+    "url": "https://github.com/tiaanduplessis/dont-go.git"
   },
   "bugs": {
-    "url": "https://github.com/mightyCrow/dont-go/issues"
+    "url": "https://github.com/tiaanduplessis/dont-go/issues"
   },
   "files": [
     "lib"
   ],
-  "homepage": "https://github.com/mightyCrow/dont-go",
+  "homepage": "https://github.com/tiaanduplessis/dont-go",
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-eslint": "^7.0.0",
