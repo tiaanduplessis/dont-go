@@ -20,7 +20,7 @@
     "build": "NODE_ENV=development webpack --progress && NODE_ENV=production webpack --progress",
     "dev": "NODE_ENV=development webpack --progress --watch",
     "lint": "eslint .",
-    "test": "echo lol nope yolo"
+    "deploy": "npm run build;cp -f lib/dont-go.js public/; gh-pages -d public"
   },
   "library": {
     "name": "dontGo",
@@ -47,6 +47,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "eslint": "^3.7.1",
     "eslint-loader": "^1.2.1",
+    "gh-pages": "^0.12.0",
     "webpack": "^1.12.12"
   }
 }

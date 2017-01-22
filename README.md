@@ -1,19 +1,55 @@
 <p align="center">
-	<a href=""><img width="100%" src="media/leo.gif" alt="Dont go"></a>
+	<img width="100%" src="media/banner.png" alt="Dont go">
 </p>
+<br>
+<div align="center">
+	Do the old favicon switcheroo
+</div>
+<br>
+<div align="center">
+	<a href="https://badge.fury.io/gh/tiaanduplessis%2Fdont-go">
+    <img src="https://badge.fury.io/gh/tiaanduplessis%2Fdont-go.svg?style=flat-square" alt="GitHub version" />
+  </a>
+	<a href="https://badge.fury.io/js/dont-go">
+    <img src="https://badge.fury.io/js/dont-go.svg?style=flat-square" alt="npm version" />
+  </a>
+	<a href="https://badge.fury.io/bo/dont-go">
+    <img src="https://badge.fury.io/bo/dont-go.svg?style=flat-square" alt="Bower package" />
+  </a>
+	<a href="https://travis-ci.org/tiaanduplessis/dont-go">
+    <img src="https://img.shields.io/travis/tiaanduplessis/dont-go/master.svg?style=flat-square" alt="Travis Build" />
+  </a>
+	<a href="https://npmjs.org/package/dont-go">
+    <img src="https://img.shields.io/npm/dm/dont-go.svg?style=flat-square" alt="Downloads" />
+  </a>
+</div>
+<br>
+<div align="center">
+  Built with ❤︎ by <a href="http://tiaanduplessis.co.za/">Tiaan du Plessis</a> and <a href="https://github.com/tiaanduplessis/wenk/graphs/contributors">contributors</a>
+</div>
 
-# dont-go :sob:
-[![GitHub version](https://badge.fury.io/gh/tiaanduplessis%2Fdont-go.svg)](https://badge.fury.io/gh/tiaanduplessis%2Fdont-go)
-[![npm version](https://badge.fury.io/js/dont-go.svg)](https://badge.fury.io/js/dont-go)
-[![Bower version](https://badge.fury.io/bo/dont-go.svg)](https://badge.fury.io/bo/dont-go)
-[![Build Status](https://travis-ci.org/tiaanduplessis/dont-go.svg?branch=master)](https://travis-ci.org/tiaanduplessis/dont-go)
+<h2>Table of Contents</h2>
+<details>
+  <summary>Table of Contents</summary>
+	<li><a href="#introduction">Introduction</a></li>
+  <li><a href="#install">Install</a></li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#demo">Demo</a></li>
+	<li><a href="#examples">Examples</a></li>
+  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#license">License</a></li>
+</details>
 
-A small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **615 Bytes** when gzipped. Note that **You must include a default favicon in your webpage**.
-<p align="center">
-	<a href=""><img width="80%" src="media/example.png" alt="example"></a>
-</p>
+## Introduction
+
+<div align="center" width="50%">
+	<img src="media/leo.gif" alt="leo">
+</div>
+
+Dont-go is a small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **615 Bytes** when gzipped. Note that **You must include a default favicon in your webpage**.
 
 ## Install
+
 **Install with cdn**
 
 ```html
@@ -40,20 +76,40 @@ $ yarn add dont-go
 ```
 
 ## Usage
+
+<p align="center">
+	<img src="media/example.png" alt="example">
+</p>
+
 To use, simply call the function with options.
-```javascript
+```js
+
 dontGo({
 	title: 'Alternative title text right here!',
 	faviconSrc: 'path/to/Alternative/favicon.ico',
 	timeout: 5000 //5 seconds
 });
+
 ```
+
 The `faviconSrc` property is optional and will keep the same icon if not set.
 
 The `timeout` property is optional, it takes an interval in milliseconds to before title & favicon change.
 
+## Demo
+
+Check out [the demo](https://tiaanduplessis.github.io/dont-go/) here.
+
+## examples
+
+Please see the example directory for more usage examples.
+
 ## Contributing
+
 All Contributions are welcome! Please open up an issue if you would like to help out. :smile:
 
 ## License
-Created with ♥ by [Tiaan du Plessis](https://github.com/tiaanduplessis). Licensed under the [MIT License](https://tiaan.mit-license.org/).
+
+Licensed under the [MIT License](https://tiaan.mit-license.org/).
+
+Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.
