@@ -22,6 +22,9 @@
 	<a href="https://npmjs.org/package/dont-go">
     <img src="https://img.shields.io/npm/dm/dont-go.svg?style=flat-square" alt="Downloads" />
   </a>
+  <a href="http://packagequality.com/#?package=dont-go">
+    <img src="http://npm.packagequality.com/shield/dont-go.svg" alt="Package Quality" />
+  </a>
 </div>
 <br>
 <div align="center">
