@@ -6,26 +6,22 @@
   "license": "MIT",
   "main": "lib/dont-go.js",
   "keywords": [
-    "library",
-    "umd",
-    "es6",
     "title",
     "favicon",
-    "babel",
-    "universal",
-    "eslint"
+    "dont-go"
   ],
   "scripts": {
-    "start": "npm run dev",
-    "build": "NODE_ENV=development webpack --progress && NODE_ENV=production webpack --progress",
-    "dev": "NODE_ENV=development webpack --progress --watch",
-    "lint": "eslint .",
-    "deploy": "npm run build;cp -f lib/dont-go.js public/; gh-pages -d public"
+    "start": "npm run build",
+    "build": "webpack;NODE_ENV='production' webpack -p",
+    "dev": "webpack --progress --watch",
+    "deploy": "npm run build;cp -f lib/dont-go.js public/; gh-pages -d public",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "npm run lint"
   },
   "library": {
     "name": "dontGo",
-    "filename": "dont-go",
-    "entry": "dont-go.js"
+    "filename": "dont-go"
   },
   "repository": {
     "type": "git",
@@ -39,15 +35,23 @@
   ],
   "homepage": "https://github.com/tiaanduplessis/dont-go",
   "devDependencies": {
-    "babel-core": "^6.4.5",
-    "babel-eslint": "^7.0.0",
+    "babel-core": "^6.22.1",
     "babel-loader": "^6.2.1",
-    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.3.13",
-    "babel-preset-stage-0": "^6.3.13",
-    "eslint": "^3.7.1",
-    "eslint-loader": "^1.2.1",
     "gh-pages": "^0.12.0",
-    "webpack": "^1.12.12"
+    "standard": "^8.6.0",
+    "webpack": "^2.2.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "standard": {
+    "ignore": [
+      "example",
+      "lib",
+      "public"
+    ]
   }
 }
