@@ -34,7 +34,7 @@
 <h2>Table of Contents</h2>
 <details>
   <summary>Table of Contents</summary>
-	<li><a href="#introduction">Introduction</a></li>
+	<li><a href="#about">about</a></li>
   <li><a href="#install">Install</a></li>
   <li><a href="#usage">Usage</a></li>
   <li><a href="#demo">Demo</a></li>
@@ -43,13 +43,13 @@
   <li><a href="#license">License</a></li>
 </details>
 
-## Introduction
+## About
 
 <div align="center" width="50%">
 	<img src="media/leo.gif" alt="leo">
 </div>
 
-Dont-go is a small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **615 Bytes** when gzipped. Note that **You must include a default favicon in your webpage**.
+Dont-go is a small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **1.47 kB** when minified. Note that **You must include a default favicon in your webpage**.
 
 ## Install
 
