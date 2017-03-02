@@ -39,7 +39,7 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "gh-pages": "^0.12.0",
-    "standard": "^8.6.0",
+    "standard": "^10.0.0-beta.0",
     "webpack": "^2.2.1"
   },
   "babel": {
