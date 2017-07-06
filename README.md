@@ -99,11 +99,22 @@ The `faviconSrc` property is optional and will keep the same icon if not set.
 
 The `timeout` property is optional, it takes an interval in milliseconds to before title & favicon change.
 
+It is also possible to set the title property to an array of values and set an interval to switch between them as seen in the example below;
+```js
+
+dontGo({
+	title: ['Alternative title text', 'Another alternative title'],
+	faviconSrc: 'path/to/Alternative/favicon.ico',
+	interval: 1000 //1 second
+});
+
+```
+
 ## Demo
 
 Check out [the demo](https://tiaanduplessis.github.io/dont-go/) here.
 
-## examples
+## Examples
 
 Please see the example directory for more usage examples.
 
