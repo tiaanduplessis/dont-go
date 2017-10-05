@@ -45,6 +45,8 @@
 
 ## About
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/dont-go.svg)](https://greenkeeper.io/)
+
 <div align="center" width="50%">
 	<img src="media/leo.gif" alt="leo">
 </div>
