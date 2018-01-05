@@ -16,9 +16,6 @@
 	<a href="https://badge.fury.io/js/dont-go">
     <img src="https://badge.fury.io/js/dont-go.svg?style=flat-square" alt="npm version" />
   </a>
-	<a href="https://badge.fury.io/bo/dont-go">
-    <img src="https://badge.fury.io/bo/dont-go.svg?style=flat-square" alt="Bower package" />
-  </a>
 	<a href="https://travis-ci.org/tiaanduplessis/dont-go">
     <img src="https://img.shields.io/travis/tiaanduplessis/dont-go/master.svg?style=flat-square" alt="Travis Build" />
   </a>
