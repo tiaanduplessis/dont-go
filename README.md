@@ -3,12 +3,15 @@
 </p>
 <br>
 <div align="center">
-	Do the old favicon switcheroo
+	Do the old favicon switcheroo in under 500 bytes
 </div>
 <br>
 <div align="center">
 	<a href="https://badge.fury.io/gh/tiaanduplessis%2Fdont-go">
     <img src="https://badge.fury.io/gh/tiaanduplessis%2Fdont-go.svg?style=flat-square" alt="GitHub version" />
+  </a>
+  <a href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/tiaanduplessis/dont-go.svg" alt="Greenkeeper" />
   </a>
 	<a href="https://badge.fury.io/js/dont-go">
     <img src="https://badge.fury.io/js/dont-go.svg?style=flat-square" alt="npm version" />
@@ -45,13 +48,11 @@
 
 ## About
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/dont-go.svg)](https://greenkeeper.io/)
-
 <div align="center" width="50%">
 	<img src="media/leo.gif" alt="leo">
 </div>
 
-Dont-go is a small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **1.47 kB** when minified. Note that **You must include a default favicon in your webpage**.
+Dont-go is a small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **476 Bytes** when minified. Note that **You must include a default favicon in your webpage**.
 
 ## Install
 
@@ -61,11 +62,6 @@ Dont-go is a small client-side library with zero dependencies to change the titl
 <script src="https://cdn.rawgit.com/tiaanduplessis/dont-go/master/lib/dont-go.js"></script>
 <!-- Or -->
 <script src="https://unpkg.com/dont-go/lib/dont-go.js"></script>
-```
-
-**Install with Bower**
-```sh
-$ bower install dont-go
 ```
 
 **Install with npm**

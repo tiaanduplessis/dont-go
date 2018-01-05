@@ -1,6 +1,6 @@
-module.exports = function dontGo (options = {}) {
+function dontGo (options = {}) {
   const defaults = {
-    title: 'Don\'t go!',
+    title: "Don't go!",
     faviconSrc: '',
     timeout: 0,
     interval: 1000
@@ -8,6 +8,7 @@ module.exports = function dontGo (options = {}) {
 
   const opts = Object.assign(defaults, options)
   const originalTitle = document.title
+
   let favicon
   let originalFavicon
   let img
@@ -23,7 +24,7 @@ module.exports = function dontGo (options = {}) {
 
   // Preload the alternative favicon
   if (opts.faviconSrc.length) {
-    img = new Image()  // eslint-disable-line
+    img = new Image() // eslint-disable-line
     img.src = opts.faviconSrc
   }
 
@@ -64,3 +65,5 @@ module.exports = function dontGo (options = {}) {
     }
   })
 }
+
+export default dontGo

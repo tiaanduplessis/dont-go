@@ -1,6 +1,6 @@
 {
   "name": "dont-go",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Client-side library to change the title and/or favicon of the page when it is inactive",
   "author": "Tiaan du Plessis @tiaanduplessis",
   "license": "MIT",
@@ -12,16 +12,11 @@
   ],
   "scripts": {
     "start": "npm run build",
-    "build": "webpack;NODE_ENV='production' webpack -p",
-    "dev": "webpack --progress --watch",
-    "deploy": "npm run build;cp -f lib/dont-go.js public/; gh-pages -d public",
-    "lint": "standard",
-    "lint:fix": "standard --fix",
-    "test": "npm run lint"
-  },
-  "library": {
-    "name": "dontGo",
-    "filename": "dont-go"
+    "build": "microbundle --name dontGo",
+    "dev": "microbundle watch --name dontGo",
+    "deploy": "npm run build;cp -f lib/dont-go.umd.js public/; gh-pages -d public",
+    "format": "prettier-standard src/index.js",
+    "test": "npm run format"
   },
   "repository": {
     "type": "git",
@@ -35,23 +30,8 @@
   ],
   "homepage": "https://github.com/tiaanduplessis/dont-go",
   "devDependencies": {
-    "babel-core": "^6.22.1",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.3.13",
     "gh-pages": "^1.0.0",
-    "standard": "^10.0.3",
-    "webpack": "^3.6.0"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
-  "standard": {
-    "ignore": [
-      "example",
-      "lib",
-      "public"
-    ]
+    "microbundle": "^0.2.4",
+    "prettier-standard": "^8.0.0"
   }
 }
