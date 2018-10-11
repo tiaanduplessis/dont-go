@@ -31,7 +31,7 @@
   "homepage": "https://github.com/tiaanduplessis/dont-go",
   "devDependencies": {
     "gh-pages": "^2.0.0",
-    "microbundle": "^0.5.0",
+    "microbundle": "^0.6.0",
     "prettier-standard": "^8.0.0"
   }
 }
