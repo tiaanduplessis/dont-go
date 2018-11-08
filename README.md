@@ -26,22 +26,17 @@
     <img src="http://npm.packagequality.com/shield/dont-go.svg" alt="Package Quality" />
   </a>
 </div>
-<br>
-<div align="center">
-  Built with ❤︎ by <a href="http://tiaanduplessis.co.za/">Tiaan du Plessis</a> and <a href="https://github.com/tiaanduplessis/wenk/graphs/contributors">contributors</a>
-</div>
 
-<h2>Table of Contents</h2>
-<details>
-  <summary>Table of Contents</summary>
-	<li><a href="#about">about</a></li>
-  <li><a href="#install">Install</a></li>
-  <li><a href="#usage">Usage</a></li>
-  <li><a href="#demo">Demo</a></li>
-	<li><a href="#examples">Examples</a></li>
-  <li><a href="#contributing">Contributing</a></li>
-  <li><a href="#license">License</a></li>
-</details>
+## Table of Contents
+
+- [About](#about)
+- [As Seen In](#as-seen-in)
+- [Install](#install)
+- [Usage](#usage)
+- [Demo](#demo)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [license](#license)
 
 ## About
 
@@ -50,6 +45,10 @@
 </div>
 
 Dont-go is a small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **476 Bytes** when minified. Note that **You must include a default favicon in your webpage**.
+
+## As Seen In
+
+- [This Clever Trick Brings Visitors Back When They Tab Away](https://www.hongkiat.com/blog/dont-go-favicon-title/)
 
 ## Install
 

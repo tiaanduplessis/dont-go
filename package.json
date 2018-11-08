@@ -16,7 +16,8 @@
     "dev": "microbundle watch --name dontGo",
     "deploy": "npm run build;cp -f lib/dont-go.umd.js public/; gh-pages -d public",
     "format": "prettier-standard src/index.js",
-    "test": "npm run format"
+    "lint": "standard --fix src/*.js",
+    "test": "npm run lint && npm run format"
   },
   "repository": {
     "type": "git",
@@ -30,8 +31,9 @@
   ],
   "homepage": "https://github.com/tiaanduplessis/dont-go",
   "devDependencies": {
-    "gh-pages": "^2.0.0",
+    "gh-pages": "^2.0.1",
     "microbundle": "^0.7.0",
-    "prettier-standard": "^8.0.0"
+    "prettier-standard": "^8.0.1",
+    "standard": "^12.0.1"
   }
 }
