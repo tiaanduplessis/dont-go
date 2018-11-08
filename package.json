@@ -1,6 +1,6 @@
 {
   "name": "dont-go",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Client-side library to change the title and/or favicon of the page when it is inactive",
   "author": "Tiaan du Plessis @tiaanduplessis",
   "license": "MIT",
