@@ -55,8 +55,6 @@ Dont-go is a small client-side library with zero dependencies to change the titl
 **Install with cdn**
 
 ```html
-<script src="https://cdn.rawgit.com/tiaanduplessis/dont-go/master/lib/dont-go.js"></script>
-<!-- Or -->
 <script src="https://unpkg.com/dont-go/lib/dont-go.js"></script>
 ```
 
