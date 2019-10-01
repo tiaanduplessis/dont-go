@@ -1701,9 +1701,10 @@ get-stdin@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
 
-gh-pages@^2.0.1:
+gh-pages@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/gh-pages/-/gh-pages-2.0.1.tgz#aefe47a43b8d9d2aa3130576b33fe95641e29a2f"
+  integrity sha512-uFlk3bukljeiWKQ2XvPfjcSi/ou7IfoDf2p+Fj672saLAr8bnOdFVqI/JSgrSgInKpCg5BksxEwGUl++dbg8Dg==
   dependencies:
     async "^2.6.1"
     commander "^2.18.0"
@@ -2383,7 +2384,7 @@ messageformat@^1.0.2:
     nopt "~3.0.6"
     reserved-words "^0.1.2"
 
-microbundle@^0.11.0:
+microbundle@0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/microbundle/-/microbundle-0.11.0.tgz#266bcf4210192698c23fe3bf3581ab81d31a14d0"
   integrity sha512-Lt2f8OhC2y2uKyJ5zA8lEEiDsIAbk6yllBuoAWLIdYVIXYqOdN9mO3DI7VW7x/fw87gdnCLIJdVtpP6kaI99LA==
@@ -3348,9 +3349,10 @@ prettier-eslint@^8.1.1:
     typescript-eslint-parser "^16.0.0"
     vue-eslint-parser "^2.0.2"
 
-prettier-standard@^8.0.1:
+prettier-standard@8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/prettier-standard/-/prettier-standard-8.0.1.tgz#3658ddc33d46a3ace950d5454654ae47cd6ca026"
+  integrity sha512-egiIKvmlizoXuRkh83myjB4elmdIahCaUACLDaZyCgvspZQyps0fUayQpvcv4/gW/XahMTu95a3f9Fu8ouGYZw==
   dependencies:
     "@sheerun/eslint-config-standard" "^10.2.1"
     babel-eslint ">=7.2.3"
@@ -3967,9 +3969,10 @@ standard-engine@~9.0.0:
     minimist "^1.1.0"
     pkg-conf "^2.0.0"
 
-standard@^12.0.1:
+standard@12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/standard/-/standard-12.0.1.tgz#0fc5a8aa6c34c546c5562aae644242b24dae2e61"
+  integrity sha512-UqdHjh87OG2gUrNCSM4QRLF5n9h3TFPwrCNyVlkqu31Hej0L/rc8hzKqVvkb2W3x0WMq7PzZdkLfEcBhVOR6lg==
   dependencies:
     eslint "~5.4.0"
     eslint-config-standard "12.0.0"
