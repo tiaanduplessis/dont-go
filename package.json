@@ -37,6 +37,6 @@
     "gh-pages": "2.1.1",
     "microbundle": "0.11.0",
     "prettier-standard": "8.0.1",
-    "standard": "12.0.1"
+    "standard": "14.3.1"
   }
 }
