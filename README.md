@@ -3,7 +3,7 @@
 </p>
 <br>
 <div align="center">
-	Do the old favicon switcheroo in under 500 bytes
+	Change the title and favicon while your page is inactive
 </div>
 <br>
 <div align="center">
@@ -44,7 +44,7 @@
 	<img src="media/leo.gif" alt="leo">
 </div>
 
-Dont-go is a small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Minified version weighs in at a [whopping](http://www.dictionary.com/browse/whopping) **476 Bytes** when minified. Note that **You must include a default favicon in your webpage**.
+Dont-go is a small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. Include a default favicon in your webpage to enable favicon changes. Pages without one can still use title changes.
 
 ## As Seen In
 
@@ -87,19 +87,29 @@ dontGo({
 
 ```
 
-The `faviconSrc` property is optional and will keep the same icon if not set.
+The `faviconSrc` property is optional and will keep the same icon if not set. It accepts a single URL or an array of URLs.
 
-The `timeout` property is optional, it takes an interval in milliseconds to before title & favicon change.
+The `timeout` property is optional. It delays the first title and favicon change by the given number of milliseconds.
 
-It is also possible to set the title property to an array of values and set an interval to switch between them as seen in the example below;
+Set `title`, `faviconSrc`, or both to arrays to rotate through their values. Both advance on the same `interval` (1000 milliseconds by default), wrapping independently if their lengths differ. The first values appear as soon as the page becomes hidden, or after `timeout` if set:
 ```js
 
 dontGo({
 	title: ['Alternative title text', 'Another alternative title'],
-	faviconSrc: 'path/to/Alternative/favicon.ico',
+	faviconSrc: ['path/to/Alternative/favicon.ico', 'path/to/Alternative/favicon2.ico'],
 	interval: 1000 //1 second
 });
 
+```
+
+Returning to the page cancels pending changes and restores the original title and favicon. The next hidden period starts at the first values again. Empty arrays leave that property unchanged, and non-string entries are ignored. An empty favicon URL is ignored. Changes follow the Page Visibility API; focus or blur alone does not trigger them.
+
+Calling `dontGo` again replaces the previous configuration. It also returns a cleanup function for use when unmounting a component or stopping the effect:
+
+```js
+const stop = dontGo({ faviconSrc: ['one.ico', 'two.ico'] });
+// Restore the originals and remove the visibility listener and timers.
+stop();
 ```
 
 ## Demo
@@ -111,6 +121,8 @@ Check out [the demo](https://tiaanduplessis.github.io/dont-go/) here.
 Please see the example directory for more usage examples.
 
 ## Contributing
+
+Run `npm test` for lint and DOM regression tests (Node.js 18 or newer), then `npm run build` to regenerate the CommonJS, ES module, and UMD bundles.
 
 All Contributions are welcome! Please open up an issue if you would like to help out. :smile:
 
