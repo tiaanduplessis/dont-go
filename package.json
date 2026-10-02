@@ -15,12 +15,12 @@
   ],
   "scripts": {
     "start": "npm run build",
-    "build": "microbundle --name dontGo",
-    "dev": "microbundle watch --name dontGo",
+    "build": "microbundle --name dontGo --format cjs,es,umd",
+    "dev": "microbundle watch --name dontGo --format cjs,es,umd",
     "deploy": "npm run build;cp -f lib/dont-go.umd.js public/; gh-pages -d public",
     "format": "prettier-standard src/index.js",
-    "lint": "standard --fix src/*.js",
-    "test": "npm run lint && npm run format"
+    "lint": "standard src/*.js test/*.js",
+    "test": "npm run lint && node --test test/*.js"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,10 @@
   "homepage": "https://github.com/tiaanduplessis/dont-go",
   "devDependencies": {
     "gh-pages": "2.1.1",
-    "microbundle": "0.11.0",
+    "microbundle": "0.15.1",
     "prettier-standard": "8.0.1",
-    "standard": "14.3.1"
+    "standard": "14.3.1",
+    "@sinonjs/fake-timers": "15.0.0",
+    "jsdom": "26.1.0"
   }
 }

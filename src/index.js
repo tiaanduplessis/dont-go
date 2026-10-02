@@ -1,3 +1,5 @@
+let stopPrevious
+
 function dontGo (options = {}) {
   const defaults = {
     title: "Don't go!",
@@ -7,63 +9,84 @@ function dontGo (options = {}) {
   }
 
   const opts = Object.assign(defaults, options)
-  const originalTitle = document.title
+  const toArray = value => (Array.isArray(value) ? value : [value])
+    .filter(item => typeof item === 'string')
+  const titles = toArray(opts.title)
+  const favicons = toArray(opts.faviconSrc).filter(Boolean)
 
-  let favicon
-  let originalFavicon
-  let img
+  // Reinitializing replaces the previous instance and restores its originals.
+  if (stopPrevious) stopPrevious()
+
+  const originalTitle = document.title
+  const favicon = document.querySelector('link[rel$="icon"]')
+  const originalFavicon = favicon && favicon.getAttribute('href')
   let timeout
   let interval
   let counter = 0
+  let hidden = false
 
-  // Store the original favicon if it exists
-  if (document.querySelectorAll('link[rel$="icon"]').length) {
-    favicon = document.querySelector('link[rel$="icon"]')
-    originalFavicon = favicon.getAttribute('href')
+  // Preload each alternative favicon if the page has a favicon to update.
+  if (favicon) {
+    favicons.forEach(src => {
+      const img = new Image() // eslint-disable-line
+      img.src = src
+    })
   }
 
-  // Preload the alternative favicon
-  if (opts.faviconSrc.length) {
-    img = new Image() // eslint-disable-line
-    img.src = opts.faviconSrc
+  const update = () => {
+    if (titles.length && (counter === 0 || titles.length > 1)) {
+      document.title = titles[counter % titles.length]
+    }
+    if (favicon && favicons.length && (counter === 0 || favicons.length > 1)) {
+      favicon.setAttribute('href', favicons[counter % favicons.length])
+    }
+    counter++
   }
 
   const setHidden = () => {
-    // if title is string just switch the title
-    if (typeof opts.title === 'string') {
-      document.title = opts.title
-    } else {
-      document.title = opts.title[0]
-      interval = setInterval(nextTitle, opts.interval)
-    }
-
-    if (opts.faviconSrc.length) {
-      favicon.setAttribute('href', opts.faviconSrc)
+    update()
+    if (titles.length > 1 || (favicon && favicons.length > 1)) {
+      interval = setInterval(update, opts.interval)
     }
   }
 
-  const nextTitle = () => {
-    counter++
-    if (counter >= opts.title.length) {
-      counter = 0
+  const restore = () => {
+    clearTimeout(timeout)
+    clearInterval(interval)
+    hidden = false
+    counter = 0
+    document.title = originalTitle
+    if (favicon) {
+      if (originalFavicon === null) favicon.removeAttribute('href')
+      else favicon.setAttribute('href', originalFavicon)
     }
-    document.title = opts.title[counter]
   }
 
-  document.addEventListener('visibilitychange', () => {
+  const onVisibilityChange = () => {
     if (document.visibilityState === 'hidden') {
+      // Ignore duplicate events, including while the initial delay is pending.
+      if (hidden) return
+      hidden = true
       if (opts.timeout > 0) {
         timeout = setTimeout(setHidden, opts.timeout)
       } else {
         setHidden()
       }
     } else {
-      document.title = originalTitle
-      favicon.setAttribute('href', originalFavicon)
-      clearTimeout(timeout)
-      clearInterval(interval)
+      restore()
     }
-  })
+  }
+
+  const stop = () => {
+    if (stopPrevious !== stop) return
+    document.removeEventListener('visibilitychange', onVisibilityChange)
+    restore()
+    stopPrevious = undefined
+  }
+
+  document.addEventListener('visibilitychange', onVisibilityChange)
+  stopPrevious = stop
+  return stop
 }
 
 export default dontGo
