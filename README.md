@@ -55,8 +55,12 @@ Dont-go is a small client-side library with zero dependencies to change the titl
 **Install with cdn**
 
 ```html
-<script src="https://unpkg.com/dont-go/lib/dont-go.js"></script>
+<script src="https://unpkg.com/dont-go@1.1.1/lib/dont-go.umd.js"></script>
 ```
+
+Load this script before calling `window.dontGo(...)`. The UMD bundle exposes the browser global; `lib/dont-go.js` is the CommonJS entry for module loaders.
+
+The CDN example is pinned to the published 1.1.1 release. This README also describes unreleased changes on `master`: support for pages without a favicon, favicon arrays, cleanup functions, and improved lifecycle handling. These need a new release before they are available from npm or the CDN.
 
 **Install with npm**
 
@@ -122,7 +126,7 @@ Please see the example directory for more usage examples.
 
 ## Contributing
 
-Run `npm test` for lint and DOM regression tests (Node.js 18 or newer), then `npm run build` to regenerate the CommonJS, ES module, and UMD bundles.
+Run `npm test` for lint, DOM regression tests, and an offline plain-script UMD smoke test (Node.js 18 or newer), then `npm run build` to regenerate the CommonJS, ES module, and UMD bundles. Rerun `npm test` after building to check the generated UMD bundle.
 
 All Contributions are welcome! Please open up an issue if you would like to help out. :smile:
 
